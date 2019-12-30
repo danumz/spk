@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assetss/');?>assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets2/');?>assets/images/favicon.png">
     <title>Dashboard Admin Fordza</title>
 	<link rel="canonical" href="https://www.wrappixel.com/templates/materialpro/" />
     <!-- Bootstrap Core CSS -->
@@ -19,8 +19,8 @@
     <!-- chartist CSS -->
     <link href="<?= base_url('assetss/');?>assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <!-- <link href="<?= base_url('assetss/');?>assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="<?= base_url('assetss/');?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-    <link href="<?= base_url('assetss/');?>assets/plugins/css-chart/css-chart.css" rel="stylesheet"> -->
+    <link href="<?= base_url('assets2/');?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="<?= base_url('assets2/');?>assets/plugins/css-chart/css-chart.css" rel="stylesheet"> -->
     <!--This page css - Morris CSS -->
     <link href="<?= base_url('assetss/');?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
     <link href="<?= base_url('assetss/');?>assets/plugins/c3-master/c3.min.css" rel="stylesheet">
@@ -38,9 +38,12 @@
       <link href="<?= base_url('assetss/');?>assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url('assetss/');?>assets/plugins/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url('assetss/');?>assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+    <link href="<?= base_url('assetss/');?>assets/plugins/wizard/steps.css" rel="stylesheet" type="text/css">
+        <link href="<?= base_url('assetss/');?>assets/plugins/gridstack/gridstack.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assetss/');?>assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assetss/');?>assets/plugins/datatables.net-bs4/css/responsive.dataTables.min.css">
     <script src="https://cdn.tiny.cloud/1/84ivqgy1wj11pbfgd3aaxwewmi4fdqfpdu7sgbngknk1tl3h/tinymce/5/tinymce.min.js"></script>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/materialpro/" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -83,11 +86,30 @@
     <!--stickey kit -->
     <script src="<?= base_url('assetss/');?>assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="<?= base_url('assetss/');?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <link href="<?= base_url('assetss/');?>assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet" />
     <!--stickey kit -->
     <script src="<?= base_url('assetss/');?>assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="<?= base_url('assetss/');?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
     <script src="<?= base_url('assetss/');?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
+    <!-- Draggable-portlet -->
+    <script src="<?= base_url('assetss/');?>assets/plugins/jqueryui/jquery-ui.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="<?= base_url('assetss/');?>assets/plugins/gridstack/lodash.js"></script>
+    <script src="<?= base_url('assetss/');?>assets/plugins/gridstack/gridstack.js"></script>
+    <script src="<?= base_url('assetss/');?>assets/plugins/gridstack/gridstack.jQueryUI.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.grid-stack').gridstack({
+            // width: 12,
+            // alwaysShowResizeHandle: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+            // resizable: {
+            //     handles: 'e, se, s, sw, w'
+            // }
+        });
+    });
+    </script>
+
     <script src="<?= base_url('assetss/material/');?>js/custom.min.js"></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
@@ -285,7 +307,67 @@ $('#config-table').DataTable( {
     <script src="<?= base_url('assetss/');?>assets/plugins/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
     <script src="<?= base_url('assetss/');?>assets/plugins/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
     <script src="<?= base_url('assetss/');?>assets/plugins/dff/dff.js" type="text/javascript"></script>
-    <script type="text/javascript" src="<?= base_url('assetss/');?>assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="<?= base_url('assets2/');?>assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+    <script src="<?= base_url('assetss/');?>assets/plugins/wizard/jquery.steps.min.js"></script>
+   <script src="<?= base_url('assetss/');?>assets/plugins/wizard/jquery.validate.min.js"></script>
+   <script>
+       //Custom design form example
+       $(".tab-wizard").steps({
+           headerTag: "h6",
+           bodyTag: "section",
+           transitionEffect: "fade",
+           titleTemplate: '<span class="step">#index#</span> #title#',
+           labels: {
+               finish: "Submit"
+           },
+           onFinished: function (event, currentIndex) {
+               swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+
+           }
+       });
+
+
+       var form = $(".validation-wizard").show();
+
+       $(".validation-wizard").steps({
+           headerTag: "h6",
+           bodyTag: "section",
+           transitionEffect: "fade",
+           titleTemplate: '<span class="step">#index#</span> #title#',
+           labels: {
+               finish: "Submit"
+           },
+           onStepChanging: function (event, currentIndex, newIndex) {
+               return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
+           },
+           onFinishing: function (event, currentIndex) {
+               return form.validate().settings.ignore = ":disabled", form.valid()
+           },
+           onFinished: function (event, currentIndex) {
+               // swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+               var form = $(this);
+               form.submit();
+           }
+       }), $(".validation-wizard").validate({
+           ignore: "input[type=hidden]",
+           errorClass: "text-danger",
+           successClass: "text-success",
+           highlight: function (element, errorClass) {
+               $(element).removeClass(errorClass)
+           },
+           unhighlight: function (element, errorClass) {
+               $(element).removeClass(errorClass)
+           },
+           errorPlacement: function (error, element) {
+               error.insertAfter(element)
+           },
+           rules: {
+               email: {
+                   email: !0
+               }
+           }
+       })
+   </script>
 
 </body>
 
